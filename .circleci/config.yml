@@ -38,12 +38,12 @@ jobs:
             docker push $IMAGE_NAME:latest
 workflows:
   version: 2
-  build-master:
+  build-main:
     jobs:
       - build:
           filters:
             branches:
-              only: master
+              only: main
       - publish-latest:
           context:
             - Docker
@@ -51,4 +51,4 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only: main
