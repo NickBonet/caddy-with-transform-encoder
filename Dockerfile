@@ -1,6 +1,6 @@
 FROM caddy:2-builder-alpine AS builder
 
-RUN xcaddy build \
+RUN GOTOOLCHAIN=go1.24.1 xcaddy build \
   --with github.com/caddyserver/transform-encoder \
   --with github.com/caddy-dns/cloudflare \
   --with github.com/greenpau/caddy-security
