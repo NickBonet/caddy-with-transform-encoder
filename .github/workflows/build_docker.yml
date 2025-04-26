@@ -35,4 +35,3 @@ jobs:
         with:
           push: true
           tags: ghcr.io/${{ steps.lower-repo.outputs.repository }}:${{ steps.latest_sha.outputs.sha }},ghcr.io/${{ steps.lower-repo.outputs.repository }}:latest
-      - uses: gautamkrishnar/keepalive-workflow@v2
